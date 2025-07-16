@@ -107,10 +107,10 @@ const CursorAPIGuide: React.FC<CursorAPIGuideProps> = ({ onComplete, onCancel })
               <div className="bg-yellow-50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2">⚙️ API 키 생성 단계</h4>
                 <ol className="text-sm text-yellow-700 space-y-1">
-                  <li>1. "Create new secret key" 버튼 클릭</li>
-                  <li>2. 키 이름 입력 (예: "Cursor IDE")</li>
+                  <li>1. &quot;Create new secret key&quot; 버튼 클릭</li>
+                  <li>2. 키 이름 입력 (예: &quot;Cursor IDE&quot;)</li>
                   <li>3. 권한 설정 (기본값 사용)</li>
-                  <li>4. "Create secret key" 버튼 클릭</li>
+                  <li>4. &quot;Create secret key&quot; 버튼 클릭</li>
                   <li>5. 생성된 키 복사 및 안전한 곳에 저장</li>
                 </ol>
               </div>

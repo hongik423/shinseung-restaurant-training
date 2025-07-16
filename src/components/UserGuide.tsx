@@ -34,7 +34,7 @@ const UserGuide = () => {
         '8자 이상의 안전한 비밀번호를 설정하세요',
         '비밀번호 확인란에 동일한 비밀번호를 입력하세요',
         'GitHub 사용자명은 선택사항입니다 (나중에 추가 가능)',
-        '"회원가입하고 시작하기" 버튼을 클릭하세요'
+        '&quot;회원가입하고 시작하기&quot; 버튼을 클릭하세요'
       ],
       tips: [
         '💡 비밀번호는 영문, 숫자, 특수문자를 조합하면 더 안전합니다',
@@ -60,7 +60,7 @@ const UserGuide = () => {
       time: '1분',
       description: '개발 환경 적합성 자동 확인',
       instructions: [
-        '로그인 후 자동으로 나타나는 "시스템 체크 시작" 버튼을 클릭하세요',
+        '로그인 후 자동으로 나타나는 &quot;시스템 체크 시작&quot; 버튼을 클릭하세요',
         '시스템이 자동으로 다음 항목들을 확인합니다:',
         '  - 운영체제 정보',
         '  - 브라우저 종류와 버전',
@@ -94,9 +94,9 @@ const UserGuide = () => {
       description: 'JavaScript 실행 환경 확인',
       instructions: [
         '터미널(명령 프롬프트)을 열어주세요',
-        '  - Windows: Windows키 + R → "cmd" 입력 → Enter',
-        '  - Mac: Command + Space → "터미널" 입력',
-        '표시된 명령어 "node --version"을 복사하세요',
+        '  - Windows: Windows키 + R → &quot;cmd&quot; 입력 → Enter',
+        '  - Mac: Command + Space → &quot;터미널&quot; 입력',
+        '표시된 명령어 &quot;node --version&quot;을 복사하세요',
         '터미널에 명령어를 붙여넣고 Enter를 누르세요',
         '출력된 결과를 모두 선택하여 복사하세요',
         '웹페이지의 텍스트 영역에 결과를 붙여넣으세요',
@@ -105,7 +105,7 @@ const UserGuide = () => {
       tips: [
         '💡 Node.js 18.0.0 이상 버전을 권장합니다',
         '💡 설치 후 터미널을 재시작해야 할 수 있습니다',
-        '💡 "복사" 버튼을 클릭하면 명령어가 자동으로 복사됩니다'
+        '💡 &quot;복사&quot; 버튼을 클릭하면 명령어가 자동으로 복사됩니다'
       ],
       commonIssues: [
         {
@@ -127,7 +127,7 @@ const UserGuide = () => {
       description: '버전 관리 시스템 확인',
       instructions: [
         '터미널(명령 프롬프트)을 열어주세요',
-        '표시된 명령어 "git --version"을 복사하세요',
+        '표시된 명령어 &quot;git --version&quot;을 복사하세요',
         '터미널에 명령어를 붙여넣고 Enter를 누르세요',
         '출력된 결과를 모두 선택하여 복사하세요',
         '웹페이지의 텍스트 영역에 결과를 붙여넣으세요',
@@ -145,7 +145,7 @@ const UserGuide = () => {
         },
         {
           issue: 'Mac에서 개발자 도구가 없습니다',
-          solution: '터미널에서 "xcode-select --install" 명령어를 실행하세요'
+          solution: '터미널에서 &quot;xcode-select --install&quot; 명령어를 실행하세요'
         }
       ]
     },
@@ -157,14 +157,14 @@ const UserGuide = () => {
       time: '3분',
       description: '코드 저장소 서비스 연결',
       instructions: [
-        'GitHub 계정이 없다면 "GitHub 계정 생성" 버튼을 클릭하세요',
+        'GitHub 계정이 없다면 &quot;GitHub 계정 생성&quot; 버튼을 클릭하세요',
         '새 탭에서 GitHub 사이트가 열립니다',
         '다음 정보를 입력하여 계정을 생성하세요:',
         '  - 사용자명 (영문, 숫자, 하이픈만 사용)',
         '  - 이메일 주소',
         '  - 비밀번호',
         '이메일 인증을 완료하세요',
-        '계정 생성 후 원래 페이지로 돌아와서 "GitHub 계정 연결 완료" 버튼을 클릭하세요'
+        '계정 생성 후 원래 페이지로 돌아와서 &quot;GitHub 계정 연결 완료&quot; 버튼을 클릭하세요'
       ],
       tips: [
         '💡 GitHub 사용자명은 영문, 숫자, 하이픈(-)만 사용 가능합니다',

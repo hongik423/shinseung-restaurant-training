@@ -39,7 +39,7 @@ function generateProjectName(projectType, customName) {
 // 디렉토리 생성
 function createDirectory(projectPath) {
   if (fs.existsSync(projectPath)) {
-    throw new Error(`디렉토리 '${projectPath}'가 이미 존재합니다.`);
+    throw new Error(`디렉토리 '${projectPath}'가 이미 존재합니다. 다른 이름을 사용하거나 기존 폴더를 삭제해주세요.`);
   }
   fs.mkdirSync(projectPath, { recursive: true });
 }
@@ -127,8 +127,12 @@ async function createCommand(projectType, projectName, options) {
     console.error(chalk.red(error.message));
     
     // 실패 시 생성된 폴더 삭제
-    if (projectName && fs.existsSync(projectName)) {
-      fs.rmSync(projectName, { recursive: true, force: true });
+    if (finalProjectName && fs.existsSync(finalProjectName)) {
+      try {
+        fs.rmSync(finalProjectName, { recursive: true, force: true });
+      } catch (deleteError) {
+        console.warn(chalk.yellow('⚠️ 생성된 폴더를 삭제할 수 없습니다:', deleteError.message));
+      }
     }
     
     process.exit(1);

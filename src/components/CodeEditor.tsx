@@ -331,7 +331,7 @@ setInterval(updateTime, 5000);`
     if (initialCode.html === '' && initialCode.css === '' && initialCode.js === '') {
       setCode(defaultTemplates);
     }
-  }, []);
+  }, [defaultTemplates, initialCode.html, initialCode.css, initialCode.js]);
 
   useEffect(() => {
     if (onCodeChange) {

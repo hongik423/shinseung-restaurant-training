@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Heart, MessageCircle, Share2, Eye, Users, Award, Clock, Star } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const CommunityPage = () => {
@@ -250,9 +251,11 @@ const CommunityPage = () => {
               {featuredWorks.map((work) => (
                 <Card key={work.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative">
-                    <img 
+                    <Image 
                       src={work.image} 
                       alt={work.title}
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover"
                     />
                     {work.isNew && (

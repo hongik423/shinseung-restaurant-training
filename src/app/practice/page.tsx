@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Users, Star, Code, Zap, Palette } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const PracticePage = () => {
@@ -177,9 +178,11 @@ const PracticePage = () => {
           {filteredProjects.map((project) => (
             <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative">
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.title}
+                  width={400}
+                  height={192}
                   className="w-full h-48 object-cover"
                 />
                 {project.completed && (

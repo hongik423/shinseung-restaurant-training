@@ -701,7 +701,7 @@ const GitHubGuide = () => {
                 <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
                   <div className="flex-1">
                     <h3 className="font-medium text-green-900">3. 작업 완료</h3>
-                    <p className="text-sm text-green-700">git add . && git commit -m "Add new feature"</p>
+                    <p className="text-sm text-green-700">git add . && git commit -m &quot;Add new feature&quot;</p>
                   </div>
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">3</span>

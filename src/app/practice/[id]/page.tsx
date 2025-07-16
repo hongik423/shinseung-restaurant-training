@@ -19,6 +19,7 @@ import {
   Lightbulb
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 
@@ -688,9 +689,11 @@ window.addEventListener('resize', function() {
             </div>
             
             <div>
-              <img 
+              <Image 
                 src={project.image} 
                 alt={project.title}
+                width={600}
+                height={256}
                 className="w-full h-64 object-cover rounded-lg shadow-md"
               />
             </div>

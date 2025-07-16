@@ -622,7 +622,7 @@ const VercelGuide = () => {
                     <div className="bg-white p-4 rounded-lg">
                       <code className="text-sm text-secondary-700">
                         git add .<br/>
-                        git commit -m "Ready for deployment"<br/>
+                        git commit -m &quot;Ready for deployment&quot;<br/>
                         git push origin main
                       </code>
                     </div>
