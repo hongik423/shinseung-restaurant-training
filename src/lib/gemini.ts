@@ -3,21 +3,23 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 // Gemini API 키 (환경 변수에서 가져오기)
 const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
-// API 키 검증
+// API 키 검증 (빌드 시점에서는 오류를 던지지 않음)
+let genAI: GoogleGenerativeAI | null = null;
+let model: any = null;
+
 if (!GEMINI_API_KEY) {
-  console.error('⚠️ Gemini API 키가 설정되지 않았습니다.');
-  console.error('📋 설정 방법:');
-  console.error('1. https://aistudio.google.com/app/apikey 에서 API 키 생성');
-  console.error('2. .env.local 파일에 NEXT_PUBLIC_GEMINI_API_KEY=your_api_key 추가');
-  console.error('3. 개발 서버 재시작 (npm run dev)');
-  throw new Error('Gemini API 키가 필요합니다. 환경변수를 설정해주세요.');
+  console.warn('⚠️ Gemini API 키가 설정되지 않았습니다.');
+  console.warn('📋 설정 방법:');
+  console.warn('1. https://aistudio.google.com/app/apikey 에서 API 키 생성');
+  console.warn('2. .env.local 파일에 NEXT_PUBLIC_GEMINI_API_KEY=your_api_key 추가');
+  console.warn('3. 개발 서버 재시작 (npm run dev)');
+} else {
+  // Gemini AI 인스턴스 생성
+  genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+  
+  // 모델 설정
+  model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 }
-
-// Gemini AI 인스턴스 생성
-const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-
-// 모델 설정
-const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
 // 채팅 메시지 타입 정의
 export interface ChatMessage {
