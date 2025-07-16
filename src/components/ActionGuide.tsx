@@ -117,7 +117,7 @@ const ActionGuide: React.FC<ActionGuideProps> = ({
           title: 'Cursor IDE 다운로드 및 설치',
           description: 'Cursor AI 통합 개발 환경을 다운로드하고 설치하세요',
           type: 'browser' as const,
-          url: 'https://cursor.com/',
+          url: 'https://cursor.com/?from=home',
           tips: [
             'Cursor는 VS Code 기반의 AI 통합 IDE입니다',
             '설치 후 GitHub 계정으로 로그인하세요',
