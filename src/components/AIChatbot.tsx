@@ -45,7 +45,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
     {
       id: '1',
       role: 'assistant',
-      content: '안녕하세요! 저는 **AI 상담 챗봇**입니다. 🤖✨\n\n**개발 관련 모든 질문을 도와드립니다:**\n• 🔍 오류 분석 및 해결 방법\n• 📝 코드 리뷰 및 개선 제안\n• 💡 개발 관련 질문 답변\n• 📚 학습 가이드 생성\n\n**무엇을 도와드릴까요?** 편하게 질문해주세요! 😊',
+      content: '👋 안녕하세요! **AI 기술 지원 담당자**입니다! 🔧✨\n\n**개발 과정에서 발생하는 모든 문제를 해결해드립니다:**\n\n🚨 **오류 수정 전문**\n• Build 오류, 런타임 오류 해결\n• 의존성 충돌 문제 해결\n• 타입 오류 및 문법 오류 수정\n\n⚙️ **환경 설정 지원**\n• Node.js, npm 설치 및 설정\n• Cursor IDE 설정 및 API 연결\n• Git, GitHub 연결 및 설정\n• Vercel 배포 설정\n\n💡 **즉시 도움이 필요하시면:**\n• 오류 메시지를 복사해서 붙여넣기\n• 스크린샷과 함께 질문하기\n• "환경설정 도움" 이라고 말하기\n\n**어떤 문제가 발생했나요?** 🤔',
       timestamp: new Date()
     }
   ]);
@@ -200,8 +200,8 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <Card className={`w-96 h-96 ${isMinimized ? 'h-12' : 'h-96'} transition-all duration-300 shadow-lg`}>
+    <div className="fixed top-20 right-6 z-50">
+      <Card className={`w-96 ${isMinimized ? 'h-12' : 'h-[500px]'} transition-all duration-300 shadow-2xl border-2 border-gray-200`}>
         <CardHeader className="pb-3 bg-gradient-to-r from-blue-50 to-purple-50 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <CardTitle className="text-lg flex items-center gap-2">

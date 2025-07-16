@@ -44,7 +44,7 @@ const FloatingChatButton: React.FC = () => {
       <ErrorDetector onErrorDetected={handleErrorDetected} />
       
       {!isChatOpen && (
-        <div className="fixed bottom-6 right-6 z-40">
+        <div className="fixed top-6 right-6 z-40">
           {/* AI 상담 챗봇 메인 버튼 */}
           <div className="group relative">
             <Button
@@ -70,16 +70,16 @@ const FloatingChatButton: React.FC = () => {
             </Button>
             
             {/* AI 상담 챗봇 라벨 */}
-            <div className="absolute bottom-20 right-0 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-sm font-medium px-4 py-3 rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-gray-700">
+            <div className="absolute top-20 right-0 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-sm font-medium px-4 py-3 rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-gray-700">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="font-bold text-blue-200">AI 상담 챗봇</span>
+                <span className="font-bold text-blue-200">🔧 AI 기술 지원</span>
               </div>
               <div className="text-xs text-gray-300 mt-1">
-                개발 관련 질문을 도와드려요!
+                오류 수정 • 환경설정 • 개발 지원
               </div>
               {/* 화살표 */}
-              <div className="absolute top-full right-6 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+              <div className="absolute bottom-full right-6 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-gray-800"></div>
             </div>
             
             {/* 물결 효과 */}
