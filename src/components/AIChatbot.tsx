@@ -45,7 +45,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
     {
       id: '1',
       role: 'assistant',
-      content: '안녕하세요! 저는 AI 개발 도우미입니다. 🤖\n\n다음과 같은 도움을 드릴 수 있습니다:\n• 오류 분석 및 해결 방법\n• 코드 리뷰 및 개선 제안\n• 개발 관련 질문 답변\n• 학습 가이드 생성\n\n어떤 도움이 필요하신가요?',
+      content: '안녕하세요! 저는 **AI 상담 챗봇**입니다. 🤖✨\n\n**개발 관련 모든 질문을 도와드립니다:**\n• 🔍 오류 분석 및 해결 방법\n• 📝 코드 리뷰 및 개선 제안\n• 💡 개발 관련 질문 답변\n• 📚 학습 가이드 생성\n\n**무엇을 도와드릴까요?** 편하게 질문해주세요! 😊',
       timestamp: new Date()
     }
   ]);
@@ -202,11 +202,17 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <Card className={`w-96 h-96 ${isMinimized ? 'h-12' : 'h-96'} transition-all duration-300 shadow-lg`}>
-        <CardHeader className="pb-3">
+        <CardHeader className="pb-3 bg-gradient-to-r from-blue-50 to-purple-50 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <CardTitle className="text-lg flex items-center gap-2">
-              <Bot className="w-5 h-5 text-blue-600" />
-              AI 개발 도우미
+              <div className="relative">
+                <Bot className="w-6 h-6 text-blue-600" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border border-white animate-pulse"></div>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-gray-800">AI 상담 챗봇</span>
+                <span className="text-xs text-gray-500 font-normal">개발 도우미</span>
+              </div>
             </CardTitle>
             <div className="flex items-center gap-1">
               <Button
