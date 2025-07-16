@@ -236,7 +236,8 @@ const ActionGuide: React.FC<ActionGuideProps> = ({
           tips: [
             '폴더 이름은 영문과 하이픈만 사용하세요',
             '바탕화면이나 Documents 폴더에 생성하세요',
-            '생성된 폴더를 Cursor로 열어보세요'
+            '생성된 폴더를 Cursor로 열어보세요',
+            'Windows: mkdir 명령어, Mac/Linux: mkdir 명령어 동일'
           ]
         },
         {

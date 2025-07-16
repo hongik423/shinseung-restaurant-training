@@ -80,8 +80,11 @@ const TerminalChecker: React.FC<TerminalCheckerProps> = ({
           expectedFormat: '예상 출력 형식: 9.6.7',
           troubleshooting: [
             '1. Node.js가 제대로 설치되었는지 확인하세요',
-            '2. npm cache clean --force 명령어를 실행해보세요',
-            '3. Node.js를 재설치해보세요'
+            '2. 터미널을 완전히 종료하고 다시 시작하세요',
+            '3. Windows에서 "npm.cmd --version"을 시도해보세요',
+            '4. 환경 변수 PATH에 Node.js 경로가 포함되어 있는지 확인하세요',
+            '5. npm cache clean --force 명령어를 실행해보세요',
+            '6. Node.js를 재설치해보세요'
           ]
         };
       case 'git --version':
