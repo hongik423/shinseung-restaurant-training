@@ -125,6 +125,85 @@ const ActionGuide: React.FC<ActionGuideProps> = ({
           ]
         },
         {
+          id: 'setup-cursor-api',
+          title: '🔑 Cursor AI API 설정 (중요!)',
+          description: 'Cursor에서 AI 기능을 사용하기 위한 API 키 설정',
+          type: 'guide' as const,
+          tips: [
+            '더 강력한 AI 모델 사용 가능',
+            '무료 사용량 제한 해제',
+            '개인 API 키로 더 안전한 사용',
+            '설정하지 않으면 AI 기능 제한적 사용'
+          ],
+          steps: [
+            '1. Cursor 실행 → Ctrl+, (설정 열기)',
+            '2. "Models" 탭 클릭',
+            '3. 원하는 API 제공업체 선택',
+            '4. 발급받은 API 키 입력',
+            '5. Cursor 재시작'
+          ]
+        },
+        {
+          id: 'get-openai-api',
+          title: '🤖 OpenAI API 키 발급 (ChatGPT)',
+          description: 'GPT-4o, GPT-4o mini 모델 사용을 위한 API 키',
+          type: 'browser' as const,
+          url: 'https://platform.openai.com/api-keys',
+          tips: [
+            '가장 인기 있는 AI 모델',
+            '코딩에 특화된 성능',
+            '$0.03/1K tokens부터 시작',
+            '신용카드 등록 필요'
+          ],
+          steps: [
+            '1. OpenAI 계정 생성/로그인',
+            '2. "Create new secret key" 클릭',
+            '3. 키 이름 입력 (예: "Cursor IDE")',
+            '4. API 키 복사 후 안전한 곳에 보관',
+            '5. Cursor Settings → Models → OpenAI API Key 입력'
+          ]
+        },
+        {
+          id: 'get-anthropic-api',
+          title: '🧠 Anthropic API 키 발급 (Claude)',
+          description: 'Claude 3.5 Sonnet, Claude 3 Haiku 모델 사용',
+          type: 'browser' as const,
+          url: 'https://console.anthropic.com/',
+          tips: [
+            '긴 컨텍스트 처리 우수',
+            '코드 분석 및 리팩토링 특화',
+            '$0.25/1K tokens부터 시작',
+            '신용카드 등록 필요'
+          ],
+          steps: [
+            '1. Anthropic 계정 생성/로그인',
+            '2. "Get API Keys" 클릭',
+            '3. 키 이름 입력 (예: "Cursor IDE")',
+            '4. API 키 생성 후 복사',
+            '5. Cursor Settings → Models → Anthropic API Key 입력'
+          ]
+        },
+        {
+          id: 'get-gemini-api',
+          title: '⚡ Google Gemini API 키 발급',
+          description: 'Gemini 2.5 Flash 모델 사용 (무료 사용량 제공)',
+          type: 'browser' as const,
+          url: 'https://aistudio.google.com/app/apikey',
+          tips: [
+            '무료 사용량 제공',
+            '빠른 응답 속도',
+            '멀티모달 지원',
+            '신용카드 등록 불필요'
+          ],
+          steps: [
+            '1. Google 계정으로 로그인',
+            '2. "Create API Key" 클릭',
+            '3. 프로젝트 선택 또는 새로 생성',
+            '4. API 키 생성 후 복사',
+            '5. Cursor Settings → Models → Google API Key 입력'
+          ]
+        },
+        {
           id: 'download-claude',
           title: 'Claude Desktop 다운로드 및 설치',
           description: 'Claude AI 데스크톱 앱을 다운로드하고 설치하세요',
