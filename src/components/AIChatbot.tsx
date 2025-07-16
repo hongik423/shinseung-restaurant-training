@@ -45,7 +45,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
     {
       id: '1',
       role: 'assistant',
-      content: '👋 안녕하세요! **AI 기술 지원 담당자**입니다! 🔧✨\n\n**개발 과정에서 발생하는 모든 문제를 해결해드립니다:**\n\n🚨 **오류 수정 전문**\n• Build 오류, 런타임 오류 해결\n• 의존성 충돌 문제 해결\n• 타입 오류 및 문법 오류 수정\n\n⚙️ **환경 설정 지원**\n• Node.js, npm 설치 및 설정\n• Cursor IDE 설정 및 API 연결\n• Git, GitHub 연결 및 설정\n• Vercel 배포 설정\n\n💡 **즉시 도움이 필요하시면:**\n• 오류 메시지를 복사해서 붙여넣기\n• 스크린샷과 함께 질문하기\n• "환경설정 도움" 이라고 말하기\n\n**어떤 문제가 발생했나요?** 🤔',
+      content: '👋 안녕하세요! **신승반점 실습 전용 AI 어시스턴트**입니다! 🏮✨\n\n**Cursor IDE로 신승반점 랜딩페이지 실습을 도와드립니다:**\n\n🚨 **Cursor 실습 오류 해결**\n• HTML/CSS/JavaScript 오류 수정\n• Cursor AI 활용 팁 및 프롬프트 최적화\n• 실시간 코드 에디터 사용법\n\n⚙️ **실습 환경 설정**\n• Cursor IDE 설정 및 API 연결\n• Node.js, npm 설치 가이드\n• GitHub 연결 및 Vercel 배포\n\n💡 **실습 도움말:**\n• 신승반점 프로젝트 관련 질문\n• Cursor 프롬프트 작성 도움\n• 단계별 실습 가이드\n\n**신승반점 실습에서 어떤 문제가 발생했나요?** 🤔',
       timestamp: new Date()
     }
   ]);
@@ -53,6 +53,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
   const [codeInput, setCodeInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [chatMode, setChatMode] = useState<'general' | 'error' | 'code' | 'guide'>('general');
+  const [isExpanded, setIsExpanded] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -200,8 +201,8 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
   if (!isOpen) return null;
 
   return (
-          <div className="fixed top-28 right-6 z-50">
-      <Card className={`w-96 ${isMinimized ? 'h-12' : 'h-[500px]'} transition-all duration-300 shadow-2xl border-2 border-gray-200`}>
+                <div className="fixed top-28 right-6 z-50">
+        <Card className={`${isExpanded ? 'w-[600px]' : 'w-96'} ${isMinimized ? 'h-12' : (isExpanded ? 'h-[700px]' : 'h-[500px]')} transition-all duration-300 shadow-2xl border-2 border-gray-200`}>
         <CardHeader className="pb-3 bg-gradient-to-r from-blue-50 to-purple-50 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <CardTitle className="text-lg flex items-center gap-2">
@@ -222,6 +223,15 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
                 className="h-8 w-8 p-0"
               >
                 {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
+              </Button>
+              <Button
+                onClick={() => setIsExpanded(!isExpanded)}
+                variant="ghost"
+                size="sm"
+                className="h-8 w-8 p-0"
+                title={isExpanded ? "화면 축소" : "화면 확대"}
+              >
+                {isExpanded ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
               </Button>
               <Button
                 onClick={onClose}

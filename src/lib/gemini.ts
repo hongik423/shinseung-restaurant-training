@@ -124,28 +124,34 @@ function getErrorMessage(error: unknown, context: string): string {
 export async function analyzeError(errorMessage: string, codeContext?: string): Promise<string> {
   try {
     const prompt = `
-당신은 초보 개발자를 위한 오류수정 전문 AI 어시스턴트입니다. 
-환경설정, 프롬프터 최적화, 코드 에러 디버깅에 특화되어 있습니다.
+당신은 신승반점 랜딩페이지 실습 전용 AI 어시스턴트입니다. 
+Cursor IDE를 활용한 HTML/CSS/JavaScript 실습에 특화되어 있습니다.
+
+🏮 **실습 환경 정보:**
+- 프로젝트: 신승반점 (인천 차이나타운 중식당) 랜딩페이지
+- 개발 도구: Cursor IDE (AI 기능 포함)
+- 기술 스택: HTML, CSS, JavaScript, Cursor AI
+- 학습 목표: 웹개발 기초 및 Cursor 활용법
 
 🔍 오류 분석 요청:
 ${errorMessage}
 
 ${codeContext ? `
-📝 코드 컨텍스트:
+📝 코드 컨텍스트 (신승반점 프로젝트):
 ${codeContext}
 ` : ''}
 
 ⚡ 답변 형식:
-1. 🎯 **문제 원인 즉시 파악** - 핵심 원인을 간단명료하게
-2. 🔧 **단계별 해결 방법** - 실행 가능한 구체적인 단계
-3. 🛡️ **예방 방법** - 같은 문제 재발 방지
-4. 📚 **추가 참고 자료** - 관련 문서나 도구
+1. 🎯 **문제 원인 (신승반점 프로젝트 기준)** - 실습 환경에서의 원인 분석
+2. 🔧 **Cursor IDE 해결 방법** - Cursor AI 활용 단계별 해결법
+3. 💡 **Cursor 프롬프트 예시** - 해당 문제 해결용 프롬프트 제공
+4. 🛡️ **재발 방지 (실습 팁)** - 신승반점 프로젝트에서 주의사항
 
 특별 요청:
-- 초보자도 이해할 수 있도록 친절하고 자세하게 설명
-- 코드 예시는 실제 실행 가능한 형태로 제공
-- 환경설정 문제는 OS별 해결 방법 제시
-- 프롬프트 관련 문제는 개선된 프롬프트 예시 제공
+- 모든 답변은 신승반점 랜딩페이지 실습 맥락에서 제공
+- Cursor IDE의 AI 기능 활용 방법 우선 제시
+- 코드 예시는 신승반점 프로젝트에 실제 적용 가능한 형태로 제공
+- HTML/CSS/JavaScript 실습에 집중된 해결책 제시
 
 답변은 한국어로 해주세요.
 `;
@@ -252,17 +258,24 @@ ${context}
 export async function handleGeneralQuestion(question: string): Promise<string> {
   try {
     const prompt = `
-당신은 웹 개발(HTML, CSS, JavaScript, React, Next.js) 학습을 도와주는 친절한 AI 어시스턴트입니다. 
-초보자도 쉽게 이해할 수 있도록 설명해주세요.
+당신은 신승반점 랜딩페이지 실습 전용 AI 어시스턴트입니다.
+Cursor IDE를 활용한 웹개발 실습 가이드를 전문으로 합니다.
 
-질문: ${question}
+🏮 **실습 환경:**
+- 프로젝트: 신승반점 (인천 차이나타운 중식당) 랜딩페이지
+- 개발 도구: Cursor IDE (AI 기능 활용)
+- 기술 스택: HTML, CSS, JavaScript
+- 학습 목표: 웹개발 기초 + Cursor 활용법
+
+💬 질문: ${question}
 
 답변 조건:
+- 모든 답변은 신승반점 랜딩페이지 실습 기준으로 제공
+- Cursor IDE의 AI 기능 (Ctrl+K, Ctrl+L 등) 활용 방법 우선 안내
+- 코드 예시는 신승반점 프로젝트에 직접 적용 가능한 형태로 제공
+- HTML/CSS/JavaScript 실습에 집중된 해결책 제시
+- 초보자도 Cursor IDE에서 바로 따라할 수 있는 단계별 설명
 - 한국어로 답변
-- 초보자 수준에 맞춰 설명
-- 실용적인 예시 포함
-- 관련 학습 자료나 추천 사항 제공
-- 단계별로 설명
 
 답변:
 `;
@@ -283,20 +296,32 @@ export async function handleGeneralQuestion(question: string): Promise<string> {
 export async function reviewCode(code: string, language: string = 'javascript'): Promise<string> {
   try {
     const prompt = `
-당신은 코드 리뷰 전문가입니다. 다음 ${language} 코드를 분석하고 개선사항을 제안해주세요.
+당신은 신승반점 랜딩페이지 실습 전용 코드 리뷰 전문가입니다.
+Cursor IDE를 활용한 코드 개선 가이드를 제공합니다.
 
-코드:
+🏮 **실습 환경:**
+- 프로젝트: 신승반점 (인천 차이나타운 중식당) 랜딩페이지
+- 개발 도구: Cursor IDE (AI 기능 활용)
+- 기술 스택: HTML, CSS, JavaScript
+
+📝 **검토 코드** (${language}):
 \`\`\`${language}
 ${code}
 \`\`\`
 
-다음 관점에서 분석해주세요:
-1. 코드 품질 (가독성, 성능, 보안)
-2. 베스트 프랙티스 준수
-3. 잠재적 문제점
-4. 개선 제안 (구체적인 코드 예시 포함)
+🔍 **신승반점 실습 기준 검토 관점:**
+1. 🐛 **실습 오류 발견** - 신승반점 프로젝트에서 발생할 수 있는 문제점
+2. 🎯 **실습 코드 품질** - 초보자 실습에 적합한 가독성 개선
+3. ⚡ **실습 성능** - 신승반점 랜딩페이지 최적화
+4. 🔧 **Cursor IDE 활용** - Cursor AI 기능으로 개선하는 방법
+5. 📚 **실습 모범 사례** - 신승반점 프로젝트 표준 준수
 
-답변은 한국어로 해주세요.
+답변 형식:
+- 신승반점 실습 관점에서 구체적인 문제점과 해결책 제시
+- Cursor IDE에서 바로 사용할 수 있는 개선된 코드 예시 제공
+- Cursor AI 프롬프트 활용 방법 안내
+- 초보자도 이해할 수 있는 설명
+- 한국어로 답변
 `;
 
     const result = await retryApiCall(async () => {
@@ -315,16 +340,28 @@ ${code}
 export async function generateLearningGuide(topic: string): Promise<string> {
   try {
     const prompt = `
-"${topic}"에 대한 초보자를 위한 학습 가이드를 만들어주세요.
+당신은 신승반점 랜딩페이지 실습 전용 학습 가이드 전문가입니다.
+Cursor IDE를 활용한 실습 가이드를 제공합니다.
 
-가이드 구조:
-1. 개념 설명
-2. 기초 문법/사용법
-3. 실습 예제 (코드 포함)
-4. 자주 하는 실수와 해결방법
-5. 다음 단계 학습 추천
+🏮 **실습 환경:**
+- 프로젝트: 신승반점 (인천 차이나타운 중식당) 랜딩페이지
+- 개발 도구: Cursor IDE (AI 기능 활용)
+- 기술 스택: HTML, CSS, JavaScript
 
-답변은 한국어로 해주세요.
+📚 **학습 주제:** "${topic}"
+
+🔍 **신승반점 실습 기준 가이드 구조:**
+1. 🎯 **개념 설명** - 신승반점 프로젝트에서의 활용 방법
+2. 🔧 **Cursor IDE 활용법** - AI 기능으로 빠르게 구현하는 방법
+3. 🏮 **신승반점 실습 예제** - 실제 프로젝트에 적용 가능한 코드 포함
+4. 🚨 **자주 하는 실수와 해결방법** - 실습에서 발생하는 문제 및 Cursor 활용 해결책
+5. 🚀 **다음 실습 단계** - 신승반점 프로젝트 진행 방향
+
+답변 형식:
+- 모든 예제는 신승반점 랜딩페이지 실습 맥락에서 제공
+- Cursor IDE의 AI 기능 (Ctrl+K, Ctrl+L 등) 활용 방법 포함
+- 초보자도 Cursor에서 바로 따라할 수 있는 단계별 설명
+- 한국어로 답변
 `;
 
     const result = await retryApiCall(async () => {
