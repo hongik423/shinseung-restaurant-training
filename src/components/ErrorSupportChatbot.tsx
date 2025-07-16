@@ -298,7 +298,7 @@ ${code ? `관련 코드: ${code}` : ''}
   if (!isOpen) return null;
 
   return (
-    <div className="fixed top-4 right-4 z-50">
+          <div className="fixed top-26 right-4 z-50">
       <Card className={`w-96 transition-all duration-300 shadow-xl border-2 ${
         isMinimized ? 'h-14' : 'h-[500px]'
       }`}>

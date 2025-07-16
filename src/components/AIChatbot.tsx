@@ -200,7 +200,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onMinimize, isMi
   if (!isOpen) return null;
 
   return (
-    <div className="fixed top-20 right-6 z-50">
+          <div className="fixed top-28 right-6 z-50">
       <Card className={`w-96 ${isMinimized ? 'h-12' : 'h-[500px]'} transition-all duration-300 shadow-2xl border-2 border-gray-200`}>
         <CardHeader className="pb-3 bg-gradient-to-r from-blue-50 to-purple-50 border-b border-gray-200">
           <div className="flex items-center justify-between">

@@ -55,7 +55,7 @@ const FloatingErrorSupportButton: React.FC = () => {
       
       {!isChatOpen && (
         <div 
-          className="fixed top-4 right-20 z-40"
+          className="fixed top-22 right-20 z-40"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >

@@ -44,7 +44,7 @@ const FloatingChatButton: React.FC = () => {
       <ErrorDetector onErrorDetected={handleErrorDetected} />
       
       {!isChatOpen && (
-        <div className="fixed top-6 right-6 z-40">
+        <div className="fixed top-24 right-6 z-40">
           {/* AI 상담 챗봇 메인 버튼 */}
           <div className="group relative">
             <Button
